@@ -11,7 +11,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(211, 15, 15);
+
     padding: 20px;
     border-radius: 8px;
 }
@@ -63,7 +63,7 @@ ul li {
 }
 
 .cell.alive {
-    background-image: url(./cobra.png);
+    background-image: url(./xandao.png);
     background-size: cover;
     border-radius: 4px;
     border: 1px solid #7B200F;
@@ -75,7 +75,7 @@ ul li {
 }
 
 #restart-button {
-    width: 100px;
+    width: 18rem;
     margin: 12px auto;
     padding: 12px;
     font-family: "Roboto", sans-serif;
@@ -88,7 +88,7 @@ ul li {
 
 .placar {
     background-color: rgb(250, 246, 38);
-    width: 422px;
+    width:18rem;
     margin: 0 auto;
     border-radius: 6px;
 }
@@ -111,12 +111,10 @@ ul li {
 
 @media (max-width: 768px) {
     #grid-container {
-        width: 80%; /* Define a largura do grid-container em 90% da largura da viewport */
-        height: 80%; /* Define a altura do grid-container em 90% da largura da viewport */
-    }
-    
-    .cell {
-        width: calc(80vw / 20); /* Define a largura das células em 1/20 (5%) da largura da viewport */
-        height: calc(80vw / 20); /* Define a altura das células em 1/20 (5%) da largura da viewport */
+        width: 100%; /* Define a largura do grid-container em 90% da largura da viewport */
+        height: 30%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr); /* Reduza o número de colunas para caber na tela */
+        grid-template-rows: repeat(12, 1fr); /* Reduza o número de linhas para caber na tela */
     }
 }
